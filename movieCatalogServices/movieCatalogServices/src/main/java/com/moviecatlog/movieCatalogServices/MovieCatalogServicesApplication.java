@@ -2,6 +2,8 @@ package com.moviecatlog.movieCatalogServices;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class MovieCatalogServicesApplication {
@@ -10,4 +12,9 @@ public class MovieCatalogServicesApplication {
 		SpringApplication.run(MovieCatalogServicesApplication.class, args);
 	}
 
+	@Bean
+	public RestTemplate getRestTemplate() {
+		return new RestTemplate();
+	}
+	
 }
